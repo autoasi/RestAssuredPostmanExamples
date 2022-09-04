@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "args",
+    "headers",
+    "url"
+  ],
+  "properties": {
+    "args": {
+      "type": "object",
+      "default": {},
+      "title": "The args Schema",
+      "properties": {}
+    },
+    "headers": {
+      "type": "object",
+      "default": {},
+      "title": "The headers Schema",
+      "required": [
+        "x-forwarded-proto",
+        "x-forwarded-port",
+        "host",
+        "x-amzn-trace-id",
+        "accept",
+        "user-agent",
+        "accept-encoding"
+      ],
+      "properties": {
+        "x-forwarded-proto": {
+          "type": "string",
+          "default": "",
+          "title": "The x-forwarded-proto Schema"
+        },
+        "x-forwarded-port": {
+          "type": "string",
+          "default": "",
+          "title": "The x-forwarded-port Schema"
+        },
+        "host": {
+          "type": "string",
+          "default": "",
+          "title": "The host Schema"
+        },
+        "x-amzn-trace-id": {
+          "type": "string",
+          "default": "",
+          "title": "The x-amzn-trace-id Schema"
+        },
+        "accept": {
+          "type": "string",
+          "default": "",
+          "title": "The accept Schema"
+        },
+        "user-agent": {
+          "type": "string",
+          "default": "",
+          "title": "The user-agent Schema"
+        },
+        "accept-encoding": {
+          "type": "string",
+          "default": "",
+          "title": "The accept-encoding Schema"
+        }
+      }
+    },
+    "url": {
+      "type": "string",
+      "default": "",
+      "title": "The url Schema"
+    }
+  }
+}
